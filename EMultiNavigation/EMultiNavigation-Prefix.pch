@@ -1,0 +1,41 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+
+
+// RootNavigationController
+#define RootNavigationController [[RootViewController instance] navigationController]
+
+
+
+//屏幕尺寸适配相关
+#define IPHONE5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+//版本判断
+#define VERSION ([[UIDevice currentDevice].systemVersion doubleValue]>=7?YES:NO)
+
+
+/*
+ * setViewBounds
+ */
+#define setViewBounds(_obj){  \
+CGRect temp = _obj.view.bounds; \
+if(VERSION){ \
+temp.origin.y = -20;\
+} \
+_obj.view.bounds = temp;\
+}
+
