@@ -31,10 +31,6 @@ typedef enum{
 @property id<TabBarViewDelegate> tDelegate;
 
 
-// the tabbar position
-+(EMultiTabBarPosition)position;
-
-
 /**
  初始化 TabBarView
  @param frame frame

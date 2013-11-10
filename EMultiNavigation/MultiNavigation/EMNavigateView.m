@@ -16,8 +16,7 @@ static EMNavigateView *EMNView;
 +(EMNavigateView *)instance
 {
     if (EMNView == nil) {
-        EMNView = [[EMNavigateView alloc]initWithFrame:CGRectMake(0, 0, 320, 44)];
-        
+        EMNView = [[EMNavigateView alloc]initWithFrame:CGRectMake(0, 0, 320, 64)];
     }
     return EMNView;
 }
@@ -26,10 +25,7 @@ static EMNavigateView *EMNView;
 {
     EMNView = [super initWithFrame:frame];
     if (EMNView) {
-        self.title = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, 200, 44)];
-        [self.title setText:@"test"];
-        [EMNView addSubview:self.title];
-        [self.button setTitle:@"testbut" forState:UIControlStateDisabled];
+        self.title.text = @"eeeee";
     }
     return EMNView;
 }

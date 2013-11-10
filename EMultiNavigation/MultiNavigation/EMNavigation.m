@@ -38,8 +38,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-
     
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(paningGestureReceive:)];
     
@@ -119,7 +117,6 @@
             }
             //End paning, always check that if it should move right or move left automatically
         }else if (recoginzer.state == UIGestureRecognizerStateEnded){
-            NSLog(@"end");
             
             if (touchPoint.x - startTouch.x > 50)
             {

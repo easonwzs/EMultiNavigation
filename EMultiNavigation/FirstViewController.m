@@ -7,7 +7,6 @@
 //
 
 #import "FirstViewController.h"
-//#import "RootViewController.h"
 @interface FirstViewController ()
 
 @end
@@ -19,14 +18,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        setViewBounds(self);
-        NSArray *nibArray = [[NSBundle mainBundle]loadNibNamed:@"EMNavigateView" owner:self options:nil];
-        EMNavigateView *EMNView = nibArray[0];
-        NSLog(@"%f",self.view.bounds.origin.y);
-        [EMNView setFrame:CGRectMake(0,-20, 320, 64)];
-        [EMNView setBackgroundColor:[UIColor redColor]];
-        EMNView.button.hidden = YES;
-        [self.view addSubview:EMNView];
+        
     }
     return self;
 }
@@ -55,6 +47,20 @@
     textView.font = [UIFont systemFontOfSize:12];
     textView.text = @"MultiLayerNavigation helps you implemntation the interaction -- 'drag to back' in a easy way.\n The only one thing you need to do is replacing your UINavigationController with the MLNavigation Controller or inherit it.";
     textView.numberOfLines = 0;
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0,300,320,140)];
+    scrollView.contentSize = CGSizeMake(320, 200);
+    scrollView.userInteractionEnabled = YES;
+    [scrollView addSubview:textView];
+    [self.view addSubview:scrollView];
+    
+    
+    setViewBounds(self);
+    NSArray *nibArray = [[NSBundle mainBundle]loadNibNamed:@"EMNavigateView" owner:self options:nil];
+    EMNavigateView *EMNView = nibArray[0];
+    [EMNView setFrame:CGRectMake(0,-20, 320, 64)];
+    [EMNView setBackgroundColor:[UIColor redColor]];
+    EMNView.title.text = [NSString stringWithFormat:@"NO.%d",RootNavigationController.viewControllers.count];
+    [self.view addSubview:EMNView];
 }
 
 - (void)didReceiveMemoryWarning

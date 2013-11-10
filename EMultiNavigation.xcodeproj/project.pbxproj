@@ -179,16 +179,16 @@
 		D90E003F18287F45001D0B3B /* MultiNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				D90E004318287FF7001D0B3B /* EMNavigation.h */,
-				D90E004418287FF7001D0B3B /* EMNavigation.m */,
-				D90E004518287FF7001D0B3B /* TabBarView.h */,
-				D90E004618287FF7001D0B3B /* TabBarView.m */,
-				D90E004018287FA4001D0B3B /* RootViewController.h */,
-				D90E004118287FA4001D0B3B /* RootViewController.m */,
+				D9B2B5A7182F3B7400B54D56 /* EMNKit.h */,
 				D9F6B3F3182CC3D700E7C8E8 /* EMNavigateView.h */,
 				D9F6B3F4182CC3D700E7C8E8 /* EMNavigateView.m */,
 				D9F6B3F6182CC5BB00E7C8E8 /* EMNavigateView.xib */,
-				D9B2B5A7182F3B7400B54D56 /* EMNKit.h */,
+				D90E004318287FF7001D0B3B /* EMNavigation.h */,
+				D90E004418287FF7001D0B3B /* EMNavigation.m */,
+				D90E004018287FA4001D0B3B /* RootViewController.h */,
+				D90E004118287FA4001D0B3B /* RootViewController.m */,
+				D90E004518287FF7001D0B3B /* TabBarView.h */,
+				D90E004618287FF7001D0B3B /* TabBarView.m */,
 			);
 			path = MultiNavigation;
 			sourceTree = "<group>";

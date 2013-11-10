@@ -35,11 +35,9 @@ static RootViewController *rootVC;
 }
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
     [self.view setFrame:CGRectMake(self.view.frame.origin.x, 20, self.view.frame.size.width, self.view.frame.size.height)];
     _arrayViewControllers = [self getViewcontrollers];
-    
     
     tabbar = [[TabBarView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-49, 320, 49) viewControllers:_arrayViewControllers backColor:nil Alpha:0.8f setDelegate:self];
     [self.view addSubview:tabbar];

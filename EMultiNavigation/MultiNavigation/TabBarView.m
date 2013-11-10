@@ -11,21 +11,17 @@
 @implementation TabBarView
 
 static TabBarView *tabbar;
-static EMultiTabBarPosition tPosition;
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor redColor];
+//        self.backgroundColor = [UIColor redColor];
         // Initialization code
     }
     return self;
 }
-+(EMultiTabBarPosition)position
-{
-    return tPosition;
-}
+
 
 -(TabBarView *)initWithFrame:(CGRect)frame viewControllers:(NSArray *)controllers backColor:(UIColor*)color Alpha:(float)alpha setDelegate:(id<TabBarViewDelegate>)delegate
 {
